@@ -1,0 +1,53 @@
+import { Img } from "react-image"
+import QualityOfService from "../../assets/quality1.png"
+import CompPricing from "../../assets/pricing2.png"
+import Customization from "../../assets/custom3.png"
+import ModernTech from "../../assets/modern4.png"
+
+function whyUs() {
+  return (
+    <div className="mx-5 xs:mx-12 sm:mx-20 md:mx-20 lg:mx-20 xl:mx-20 section-gap text-center">
+      <h2 className="text-h2">Why <span className="text-yellow-400">Kode</span>Vana?</h2>
+      <div className="flex flex-wrap justify-between">
+        <div className="mb-5 xs:mb-6 sm:mb-6 md:mb-6 lg:mb-6 xl:mb-6 md:w-1/2 lg:w-1/4 xl:w-1/4">
+          <Img
+            className="h-28 xs:h-32 sm:h-36 md:h-36 lg:h-36 xl:h-36 mx-auto"
+            src={QualityOfService}
+            alt="Workers Graphics Image"
+          />
+          <h3 className="py-2 xs:py-3 sm:py-5 md:py-5 lg:py-5 xl:py-5 text-h3">Quality of Service</h3>
+          <p className="text-para">KodeVana delivering high-quality software services to its clients and a dedication to providing excellent customer service</p>
+        </div>
+        <div className="mb-5 xs:mb-6 sm:mb-6 md:mb-6 lg:mb-6 xl:mb-6 md:w-1/2 lg:w-1/4 xl:w-1/4 px-7">
+          <Img
+            className="h-28 xs:h-32 sm:h-36 md:h-36 lg:h-36 xl:h-36 mx-auto"
+            src={CompPricing}
+            alt="Money Bank Graphics Image"
+          />
+          <h3 className="py-2 xs:py-3 sm:py-5 md:py-5 lg:py-5 xl:py-5 text-h3">Competitive Pricing</h3>
+          <p className="text-para">KodeVana offer its services at a competitive price point, making it an attractive option for small and medium-sized businesses</p>
+        </div>
+        <div className="mb-5 xs:mb-6 sm:mb-6 md:mb-6 lg:mb-6 xl:mb-6 md:w-1/2 lg:w-1/4 xl:w-1/4 px-7">
+          <Img
+            className="h-28 xs:h-32 sm:h-36 md:h-36 lg:h-36 xl:h-36 mx-auto"
+            src={Customization}
+            alt="Creativity Graphics Image"
+          />
+          <h3 className="py-2 xs:py-3 sm:py-5 md:py-5 lg:py-5 xl:py-5 text-h3">Customization</h3>
+          <p className="text-para">KodeVana offer customized software solutions that are tailored to each clients unique needs and specifications</p>
+        </div>
+        <div className="md:w-1/2 lg:w-1/4 xl:w-1/4">
+          <Img
+            className="h-28 xs:h-32 sm:h-36 md:h-36 lg:h-36 xl:h-36 mx-auto"
+            src={ModernTech}
+            alt="Tech Graphics Image"
+          />
+          <h3 className="py-2 xs:py-3 sm:py-5 md:py-5 lg:py-5 xl:py-5 text-h3">Cutting-Edge Technology</h3>
+          <p className="text-para">Kodevana use the latest software development tools and technologies to deliver high-quality, modern software solutions</p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default whyUs
