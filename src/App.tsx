@@ -1,23 +1,25 @@
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import NavBar from './components/header/MainNav'
-import Hero from './components/sections/hero';
-import Services from './components/sections/Services';
-import WhyUs from './components/sections/whyUs';
-import Projects from './components/sections/projects';
-import Blogs from './components/sections/blogs';
-import Footer from './components/sections/footer';
+import Home from './components/Home';
+import Blog from './components/Blog';
+import Freebie from './components/Freebie';
+import Project from './components/Project';
+import About from './components/About';
+import Contact from './components/Contact';
 
 function App() {
   return (
     <Router>
-      <NavBar />
-      <Hero />
-      <Services />
-      <WhyUs />
-      <Projects />
-      <Blogs />
-      <Footer />
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/freebie" element={<Freebie />} />
+          <Route path="/project" element={<Project />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
     </Router>
   );
 }

@@ -1,6 +1,6 @@
 import { Img } from "react-image";
-import img1 from "../../assets/Homeimg1.png";
-import { Wave } from "./Wave";
+import img1 from "../../../assets/Homeimg1.png";
+import { Wave } from "../Wave";
 
 function hero() {
   return (

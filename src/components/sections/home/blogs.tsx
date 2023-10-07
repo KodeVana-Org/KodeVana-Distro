@@ -1,5 +1,5 @@
 import { Img } from "react-image"
-import Blog_bg from "../../assets/Blog_bg.png"
+import Blog_bg from "../../../assets/Blog_bg.png"
 
 function blogs() {
   return (

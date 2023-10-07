@@ -1,8 +1,8 @@
 import { Img } from "react-image"
-import QualityOfService from "../../assets/quality1.png"
-import CompPricing from "../../assets/pricing2.png"
-import Customization from "../../assets/custom3.png"
-import ModernTech from "../../assets/modern4.png"
+import QualityOfService from "../../../assets/quality1.png"
+import CompPricing from "../../../assets/pricing2.png"
+import Customization from "../../../assets/custom3.png"
+import ModernTech from "../../../assets/modern4.png"
 
 function whyUs() {
   return (

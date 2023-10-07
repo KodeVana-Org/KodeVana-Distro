@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import { Img } from "react-image";
 import Menu_btn from "../../assets/menu_bar.svg";
 
-function MainNav() {
+
+const MainNav: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -28,27 +29,39 @@ function MainNav() {
                 <div className="flex text-white">
                     <ul className="hidden md:inline-flex lg:inline-flex xl:inline-flex md:gap-3 lg:gap-7 xl:gap-7">
                         <li className="navbarLi group">
-                            Home
+                            <Link to="/">
+                                Home
+                            </Link>
                             <div className="navbarUL"></div>
                         </li>
                         <li className="navbarLi group">
-                            Blogs
+                            <Link to="/Blog">
+                                Blogs
+                            </Link>
                             <div className="navbarUL"></div>
                         </li>
                         <li className="navbarLi group">
-                            Freebies
+                            <Link to="/Freebie">
+                                Freebies
+                            </Link>
                             <div className="navbarUL"></div>
                         </li>
                         <li className="navbarLi group">
-                            Projects
+                            <Link to="/Project">
+                                Projects
+                            </Link>
                             <div className="navbarUL"></div>
                         </li>
                         <li className="navbarLi group">
-                            About
+                            <Link to="/About">
+                                About
+                            </Link>
                             <div className="navbarUL"></div>
                         </li>
                         <li className="navbarLi group">
-                            Contact
+                            <Link to="/Contact">
+                                Contact
+                            </Link>
                             <div className="navbarUL"></div>
                         </li>
                     </ul>
@@ -70,22 +83,34 @@ function MainNav() {
                     <div className="absolute w-60 xs:w-72 sm:w-96 py-3 rounded-md top-10 xs:top-11 sm:top-12 md:hidden text-center lg:hidden xl:hidden bg-slate-950 z-10">
                         <ul className="text-base font-bold leading-5 text-white">
                             <li className="">
-                                Home
+                                <Link to="/">
+                                    Home
+                                </Link>
                             </li>
                             <li className="mt-5">
-                                Blogs
+                                <Link to="/Blog">
+                                    Blogs
+                                </Link>
                             </li>
                             <li className="mt-5">
-                                Freebies
+                                <Link to="/Freebie">
+                                    Freebies
+                                </Link>
                             </li>
                             <li className="mt-5">
-                                Projects
+                                <Link to="/Project">
+                                    Projects
+                                </Link>
                             </li>
                             <li className="mt-5">
-                                About
+                                <Link to="/About">
+                                    About
+                                </Link>
                             </li>
                             <li className="mt-5 mb-2">
-                                Contact
+                                <Link to="/Contact">
+                                    Contact
+                                </Link>
                             </li>
                         </ul>
                     </div>

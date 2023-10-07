@@ -1,7 +1,7 @@
 import { Img } from "react-image";
-import Globe from "../../assets/Globe_img.png"
-import App from "../../assets/App.png"
-import Ui_Ux from "../../assets/UiUx_img.png"
+import Globe from "../../../assets/Globe_img.png"
+import App from "../../../assets//App.png"
+import Ui_Ux from "../../../assets//UiUx_img.png"
 
 function Services() {
   return (
