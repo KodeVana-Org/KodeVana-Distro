@@ -1,6 +1,6 @@
 import NavBar from "./header/MainNav"
 import Hero from "./sections/home/hero"
-import Services from './sections/home/Services';
+import Services from './sections/home/services';
 import WhyUs from './sections/home/whyUs';
 import Projects from './sections/home/projects';
 import Blogs from './sections/home/blogs';

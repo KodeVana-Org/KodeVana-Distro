@@ -7,7 +7,7 @@ import ModernTech from "../../../assets/modern4.png"
 function whyUs() {
   return (
     <div className="mx-5 xs:mx-12 sm:mx-20 md:mx-20 lg:mx-20 xl:mx-20 section-gap text-center">
-      <h2 className="text-h2">Why <span className="text-yellow-400">Kode</span>Vana?</h2>
+      <h2 className="pb-3 xs:pb-5 sm:pb-7 md:pb-10 lg:pb-10 xl:pb-10 text-h2">Why <span className="text-yellow-400">Kode</span>Vana?</h2>
       <div className="flex flex-wrap justify-between">
         <div className="mb-5 xs:mb-6 sm:mb-6 md:mb-6 lg:mb-6 xl:mb-6 md:w-1/2 lg:w-1/4 xl:w-1/4">
           <Img

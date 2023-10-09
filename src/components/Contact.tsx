@@ -1,11 +1,12 @@
 import NavBar from "./header/MainNav"
 import Footer from './sections/footer';
+import ContactForm from "./sections/contact/form";
 
 function Contact() {
   return (
     <div>
       <NavBar />
-      Contact Page
+      {/* <ContactForm /> */}
       <Footer />
     </div>
   )

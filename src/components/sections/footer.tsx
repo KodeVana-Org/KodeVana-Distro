@@ -1,5 +1,5 @@
 import { Img } from "react-image"
-import { Link } from "react-router-dom"
+import { NavLink } from 'react-router-dom';
 import Arrowbtn from "../../assets/arrow-right.svg"
 import fb from "../../assets/SocialIcons/Facebook-Logo.png"
 import insta from "../../assets/SocialIcons/Instagram-Logo.png"
@@ -12,11 +12,11 @@ function footer() {
 
       {/* Logo Section */}
       <div className="col-span-2 md:mr-12 lg:mx-16 xl:mx-16">
-        <Link to="/">
+        <NavLink to="/">
           <h1 className="md:mb-4 lg:mb-7 xl:mb-7 text-2xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl font-bold text-yellow-400">
             Kode<span className="text-white">Vana</span>
           </h1>
-        </Link>
+        </NavLink>
         <p className="font-medium text-base sm:text-lg md:text-lg lg:text-lg xl:text-xl text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam minima, laboriosam optio corporis fugiat saepe eligendi molestiae architecto inventore expedita.</p>
       </div>
 
@@ -24,31 +24,31 @@ function footer() {
       <div className="mt-2 sm:mt-2 md:mt-0 lg:mt-0 xl:mt-0">
         <h3 className="footer-h2">Links</h3>
         <div className="footer-h3 font-semibold">
-          <Link className="hover:text-yellow-400" to="/">
-            <p className="transition duration-300 hover:translate-x-1 hover:tracking-wider md:mb-1 lg:mb-3 xl:mb-3">
+          <NavLink className="hover:text-yellow-400" to="/">
+            <p className="hover:translate-x-1 hover:tracking-wider transition duration-500 md:mb-1 lg:mb-3 xl:mb-3">
               Home
             </p>
-          </Link>
-          <Link className="hover:text-yellow-400" to="/">
-            <p className="transition duration-300 hover:translate-x-1 hover:tracking-wider md:mb-1 lg:mb-3 xl:mb-3">
+          </NavLink>
+          <NavLink className="hover:text-yellow-400" to="/Blog">
+            <p className="hover:translate-x-1 hover:tracking-wider transition duration-500 md:mb-1 lg:mb-3 xl:mb-3">
               Blogs
             </p>
-          </Link>
-          <Link className="hover:text-yellow-400" to="/">
-            <p className="transition duration-300 hover:translate-x-1 hover:tracking-wider md:mb-1 lg:mb-3 xl:mb-3">
+          </NavLink>
+          <NavLink className="hover:text-yellow-400" to="/Freebie">
+            <p className="hover:translate-x-1 hover:tracking-wider transition duration-500 md:mb-1 lg:mb-3 xl:mb-3">
               Freebies
             </p>
-          </Link>
-          <Link className="hover:text-yellow-400" to="/">
-            <p className="transition duration-300 hover:translate-x-1 hover:tracking-wider md:mb-1 lg:mb-3 xl:mb-3">
+          </NavLink>
+          <NavLink className="hover:text-yellow-400" to="/Project">
+            <p className="hover:translate-x-1 hover:tracking-wider transition duration-500 md:mb-1 lg:mb-3 xl:mb-3">
               Projects
             </p>
-          </Link>
-          <Link className="hover:text-yellow-400" to="/">
-            <p className="transition duration-300 hover:translate-x-1 hover:tracking-wider ">
+          </NavLink>
+          <NavLink className="hover:text-yellow-400" to="/About">
+            <p className="hover:translate-x-1 hover:tracking-wider transition duration-500">
               About us
             </p>
-          </Link>
+          </NavLink>
         </div>
       </div>
 

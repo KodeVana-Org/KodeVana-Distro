@@ -1,11 +1,16 @@
 import NavBar from "./header/MainNav"
 import Footer from './sections/footer';
+import FreshInt from './sections/blog/freshInk';
+import FollowUp from './sections/blog/followUp';
+import Blogs from './sections/blog/content';
 
 function Blog() {
   return (
     <div>
       <NavBar />
-      Blog Comtent
+      <FreshInt />
+      <FollowUp />
+      <Blogs />
       <Footer />
     </div>
   )

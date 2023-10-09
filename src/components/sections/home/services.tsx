@@ -3,11 +3,11 @@ import Globe from "../../../assets/Globe_img.png"
 import App from "../../../assets//App.png"
 import Ui_Ux from "../../../assets//UiUx_img.png"
 
-function Services() {
+function services() {
   return (
-    <div className='mx-2 xs:mx-7 sm:mx-10 lg:mx-24 xl:mx-40 section-gap text-center'>
+    <div className='mt-2 xs:mt-3 sm:mt-3 lg:mt-5 xl:mt-7 mx-2 xs:mx-7 sm:mx-10 lg:mx-24 xl:mx-40 section-gap text-center'>
 
-      <h2 className="text-h2">Services We Do <span className="text-yellow-400">Best</span></h2>
+      <h2 className="pb-3 xs:pb-5 sm:pb-7 md:pb-10 lg:pb-10 xl:pb-10 text-h2">Services We Do <span className="text-yellow-400">Best</span></h2>
       <div className="md:grid lg:grid xl:grid grid-cols-3 md:gap-7 lg:gap-14 xl:gap-16">
         <div className="mb-5 xs:mb-6 sm:mb-6 md:mb-0 lg:mb-0 xl:mb-0 px-1 xs:px-5 sm:px-7 md:px-4 lg:px-7 xl:px-7 py-3 xs:py-5 sm:py-7 md:py-10 lg:py-20 xl:py-20 h-full bg-slate-900 rounded-xl transition duration-200 hover:translate-y-1 hover:drop-shadow-2xl">
           <Img
@@ -41,4 +41,4 @@ function Services() {
   )
 }
 
-export default Services
+export default services

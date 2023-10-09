@@ -1,10 +1,9 @@
 import { Img } from "react-image";
 import img1 from "../../../assets/Homeimg1.png";
-import { Wave } from "../Wave";
 
 function hero() {
   return (
-    <div className="mb-7 xs:mb-9 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0 h-fit bg-slate-900 overflow-hidden">
+    <div className="mb-7 xs:mb-9 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0 h-fit section-gap bg-slate-900 overflow-hidden">
 
       <div className="md:grid lg:grid xl:grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-0 text-center text-white">
 
@@ -29,11 +28,6 @@ function hero() {
             Let's talk!
           </button>
         </div>
-      </div>
-
-      {/* Wave */}
-      <div className="hidden w-full sm:inline-block md:inline-block lg:inline-block xl:inline-block order-3">
-        <Wave />
       </div>
     </div>
   );
