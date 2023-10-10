@@ -56,9 +56,9 @@ function footer() {
       <div className="mt-2 sm:mt-2 md:mt-0 lg:mt-0 xl:mt-0">
         <h3 className="footer-h2">Services</h3>
         <div className="cursor-default">
-          <p className="md:mb-1 lg:mb-3 xl:mb-3 footer-h3 font-semibold">Web development</p>
-          <p className="md:mb-1 lg:mb-3 xl:mb-3 footer-h3 font-semibold">App development</p>
-          <p className="md:mb-1 lg:mb-3 xl:mb-3 footer-h3 font-semibold">UI & UX Design</p>
+          <p className="md:mb-1 lg:mb-3 xl:mb-3 footer-h3 font-semibold">&rarr; Web development</p>
+          <p className="md:mb-1 lg:mb-3 xl:mb-3 footer-h3 font-semibold">&rarr; App development</p>
+          <p className="md:mb-1 lg:mb-3 xl:mb-3 footer-h3 font-semibold">&rarr; UI & UX Design</p>
         </div>
       </div>
 
