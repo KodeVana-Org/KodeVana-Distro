@@ -6,22 +6,23 @@
   .footer-h2 {
     @apply md:mb-4 lg:mb-7 xl:mb-7 text-xl xs:text-2xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl font-bold text-yellow-400;
   }
+
   .footer-h3 {
-    @apply text-base xs:text-lg sm:text-xl md:text-xl lg:text-xl xl:text-xl  text-white;
+    @apply text-base xs:text-lg sm:text-xl md:text-xl lg:text-xl xl:text-xl text-white;
   }
-  
+
   .navbarLi {
     @apply relative text-xl xl:text-2xl py-4 text-white font-semibold hover:text-yellow-400 cursor-pointer transition duration-500;
   }
-  
+
   .projectNavLi {
     @apply px-7 py-2 text-para text-slate-300 hover:text-slate-50 rounded-md;
   }
-  
+
   .navbarUL {
     @apply absolute bottom-2 h-1 w-5 hidden bg-yellow-400 group-hover:block rounded-full transition duration-500;
   }
-  
+
   .projectNavUl {
     @apply mt-3 h-1 w-full bg-slate-300 opacity-0 group-hover:opacity-100 group-hover:bg-slate-50 rounded-full transition duration-500;
   }
@@ -45,7 +46,25 @@
   .section-gap {
     @apply pb-7 xs:pb-9 sm:pb-14 md:pb-20 lg:pb-20 xl:pb-20;
   }
-  
+
+  /* For contact page */
+  /* Define a class for the scrollable textarea */
+  .scrollable-textarea {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    /* Make it scrollable */
+    -ms-overflow-style: none;
+    /* Hide scrollbar for Internet Explorer and Edge */
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+  }
+
+  /* Hide the scrollbar for Webkit-based browsers (Chrome, Safari) */
+  .scrollable-textarea::-webkit-scrollbar {
+    display: none;
+  }
+
 }
 
 body {
