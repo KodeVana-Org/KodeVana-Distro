@@ -29,11 +29,7 @@ const MainNav: React.FC = () => {
                 <div className="flex text-white">
                     <ul className="hidden md:inline-flex lg:inline-flex xl:inline-flex md:gap-3 lg:gap-7 xl:gap-7">
                         <NavLink
-                            to="/"
-
-                        // Tried to add active color to the nav Item
-                        // className="text-yellow-400"
-                        // end
+                            to="/"  
                         >
                             <li className="navbarLi group">
                                 Home
@@ -43,12 +39,6 @@ const MainNav: React.FC = () => {
                         <NavLink to="/Blog">
                             <li className="navbarLi group">
                                 Blogs
-                                <div className="navbarUL"></div>
-                            </li>
-                        </NavLink>
-                        <NavLink to="/Freebie">
-                            <li className="navbarLi group">
-                                Freebies
                                 <div className="navbarUL"></div>
                             </li>
                         </NavLink>
@@ -96,11 +86,6 @@ const MainNav: React.FC = () => {
                             <li className="mt-5">
                                 <NavLink to="/Blog">
                                     Blogs
-                                </NavLink>
-                            </li>
-                            <li className="mt-5">
-                                <NavLink to="/Freebie">
-                                    Freebies
                                 </NavLink>
                             </li>
                             <li className="mt-5">
