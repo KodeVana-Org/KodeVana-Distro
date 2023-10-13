@@ -34,11 +34,6 @@ function footer() {
               Blogs
             </p>
           </NavLink>
-          <NavLink className="hover:text-yellow-400" to="/Freebie">
-            <p className="hover:translate-x-1 hover:tracking-wider transition duration-500 md:mb-1 lg:mb-3 xl:mb-3">
-              Freebies
-            </p>
-          </NavLink>
           <NavLink className="hover:text-yellow-400" to="/Project">
             <p className="hover:translate-x-1 hover:tracking-wider transition duration-500 md:mb-1 lg:mb-3 xl:mb-3">
               Projects
