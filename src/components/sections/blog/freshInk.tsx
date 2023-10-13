@@ -3,7 +3,7 @@ import B_1 from "../../../assets/Blog-1.png"
 
 function freshInk() {
   return (
-    <div className="px-2 xs:px-7 sm:px-10 md:mx-16 lg:px-24 xl:px-40 section-gap text-center bg-slate-900">
+    <div className="px-2 xs:px-7 sm:px-10 md:px-16 lg:px-24 xl:px-40 section-gap text-center bg-slate-900">
       <h2 className="py-3 xs:py-5 sm:py-5 md:py-7 lg:py-7 xl:py-7 text-h2 text-yellow-400">Blog Spot</h2>
       <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-2 xs:gap-3 sm:gap-5 md:gap-7 lg:gap-10 xl:gap-16">
         <div className="w-full order-2 xs:order-2 sm:order-1 md:order-1 lg:order-1 xl:order-1">
