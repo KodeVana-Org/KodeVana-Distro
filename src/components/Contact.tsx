@@ -1,4 +1,4 @@
-import NavBar from "./header/MainNav"
+import NavBar from "./sections/MainNav"
 import Footer from './sections/footer';
 import ContactForm from "./sections/contact/form";
 
