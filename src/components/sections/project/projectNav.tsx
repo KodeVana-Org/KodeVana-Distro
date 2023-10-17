@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
 
-function projectNav() {
+function ProjectNav() {
   return (
     <div className="relative w-full text-center pb-7 bg-slate-900">
       <h2 className="py-3 xs:py-5 sm:py-5 md:py-7 lg:py-7 xl:py-7 text-h2 text-white">Projects done by <span className="text-yellow-400">Kode</span>Vana</h2>
@@ -52,4 +52,4 @@ function projectNav() {
   )
 }
 
-export default projectNav
+export default ProjectNav

@@ -16,7 +16,7 @@
   }
 
   .projectNavLi {
-    @apply px-7 py-2 text-para text-slate-300 hover:text-slate-50 rounded-md;
+    @apply px-2 xl:px-7 py-2 text-xs xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-base text-slate-300 hover:text-slate-50 rounded-md;
   }
 
   .navbarUL {
@@ -74,9 +74,4 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

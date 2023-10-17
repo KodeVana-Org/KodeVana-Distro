@@ -6,7 +6,7 @@ import insta from "../../assets/SocialIcons/Instagram-Logo.png"
 import lnkdin from "../../assets/SocialIcons/LinkedIn-Logo.png"
 import twtr from "../../assets/SocialIcons/Twitter-Logo.png"
 
-function footer() {
+function Footer() {
   return (
     <div className="px-5 sm:px-10 md:px-10 lg:px-10 xl:px-10 py-7 sm:py-10 md:py-10 lg:py-10 xl:py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-0 sm:gap-2 md:gap-2 lg:gap-2 xl:gap-2 lg:grid-cols-6 xl:grid-cols-6 bg-slate-900">
 
@@ -117,4 +117,4 @@ function footer() {
   )
 }
 
-export default footer
+export default Footer

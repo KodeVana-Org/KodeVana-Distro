@@ -9,7 +9,6 @@ import Contact from './components/Contact';
 function App() {
   return (
     <Router>
-      <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
@@ -17,7 +16,6 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </div>
     </Router>
   );
 }

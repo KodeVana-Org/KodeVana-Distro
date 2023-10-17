@@ -1,7 +1,7 @@
 import { Img } from "react-image"
 import Blog_bg from "../../../assets/Blog_bg.png"
 
-function blogs() {
+function Blogs() {
   return (
     <div className="mx-2 xs:mx-7 sm:mx-10 lg:mx-24 xl:mx-40 section-gap sm:grid md:grid lg:grid xl:grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 sm:gap-5 md:gap-7 lg:gap-7 xl:gap-7">
 
@@ -30,4 +30,4 @@ function blogs() {
   )
 }
 
-export default blogs
+export default Blogs

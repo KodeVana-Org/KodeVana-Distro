@@ -1,7 +1,7 @@
 import { Img } from "react-image"
 import B_1 from "../../../assets/Blog-1.png"
 
-function freshInk() {
+function FreshInk() {
   return (
     <div className="px-2 xs:px-7 sm:px-10 md:px-16 lg:px-24 xl:px-40 section-gap text-center bg-slate-900">
       <h2 className="py-3 xs:py-5 sm:py-5 md:py-7 lg:py-7 xl:py-7 text-h2 text-yellow-400">Blog Spot</h2>
@@ -24,4 +24,4 @@ function freshInk() {
   )
 }
 
-export default freshInk
+export default FreshInk

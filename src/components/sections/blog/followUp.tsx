@@ -4,7 +4,7 @@ import insta_logo from "../../../assets/SocialIcons/Instagram-Logo.png"
 import LnkdIn_logo from "../../../assets/SocialIcons/LinkedIn-Logo.png"
 import twtr_logo from "../../../assets/SocialIcons/Twitter-Logo.png"
 
-function followUp() {
+function FollowUp() {
   return (
     <div className="mx-2 xs:mx-3 sm:mx-10 md:mx-12 lg:mx-24 xl:mx-40 pt-5 grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
       <div className="text-center md:col-span-2 lg:col-span-2 xl:col-span-2">
@@ -52,4 +52,4 @@ function followUp() {
   )
 }
 
-export default followUp
+export default FollowUp

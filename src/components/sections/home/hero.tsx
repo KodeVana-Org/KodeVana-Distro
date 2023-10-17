@@ -2,7 +2,7 @@ import { Img } from "react-image";
 import img1 from "../../../assets/Homeimg1.png";
 import { NavLink } from "react-router-dom";
 
-function hero() {
+function Hero() {
   return (
     <div className="mb-7 xs:mb-9 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0 h-fit section-gap bg-slate-900 overflow-hidden">
 
@@ -37,4 +37,4 @@ function hero() {
   );
 }
 
-export default hero;
+export default Hero;

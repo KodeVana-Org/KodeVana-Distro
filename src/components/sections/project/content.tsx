@@ -2,7 +2,7 @@ import { Img } from "react-image"
 
 import P1_Img from "../../../assets/P2.png"
 
-function content() {
+function Content() {
   return (
     <div className="mt-10 mx-20 flex flex-wrap gap-1 section-gap justify-evenly">
 
@@ -20,4 +20,4 @@ function content() {
   )
 }
 
-export default content
+export default Content

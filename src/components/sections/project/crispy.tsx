@@ -1,15 +1,21 @@
 import { Img } from "react-image"
+import { useInView } from 'react-intersection-observer';
 
+import "../Animate.css"
 import P_Img from "../../../assets/P1.png"
 
 const CN = "First Client"  // Name of the client
 const PD = "One quater year" // Project duration
 
-function crispy() {
+function Crispy() {
+  const [ref, inView] = useInView({
+    threshold: 0,
+  });
+
   return (
     <div className="px-40 text-center section-gap bg-slate-900">
       <div className="grid grid-cols-5 gap-10">
-        <div className="col-span-2">
+        <div ref={ref} className={`animated-div-1 ${inView ? 'slide-in' : ''} col-span-2`}>
           <Img
             className=""
             src={P_Img}
@@ -27,4 +33,4 @@ function crispy() {
   )
 }
 
-export default crispy
+export default Crispy

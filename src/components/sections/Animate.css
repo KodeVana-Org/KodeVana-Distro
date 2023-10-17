@@ -1,0 +1,32 @@
+
+/* Slide in aimation */
+
+.animated-div-1 {
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition-delay: 0s;
+}
+
+.animated-div-2 {
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition-delay: 0.2s;
+}
+
+.animated-div-3 {
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition-delay: 0.4s;
+}
+
+.slide-in {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}

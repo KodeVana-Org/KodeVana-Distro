@@ -1,4 +1,4 @@
-import NavBar from "./header/MainNav"
+import NavBar from "./sections/MainNav"
 import Footer from './sections/footer';
 import FreshInt from './sections/blog/freshInk';
 import FollowUp from './sections/blog/followUp';

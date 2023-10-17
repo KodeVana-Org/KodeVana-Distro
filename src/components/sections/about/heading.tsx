@@ -1,5 +1,5 @@
 
-function heading() {
+function Heading() {
   return (
     <div className="mx-3 text-center section-gap">
       <h2 className="mt-2 xs:mt-3 sm:mt-4 md:mt-5 lg:mt-5 xl:mt-5 text-h2">About Us</h2>
@@ -12,4 +12,4 @@ function heading() {
   )
 }
 
-export default heading
+export default Heading

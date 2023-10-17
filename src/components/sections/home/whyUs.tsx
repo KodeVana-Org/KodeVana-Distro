@@ -4,7 +4,7 @@ import CompPricing from "../../../assets/pricing2.png"
 import Customization from "../../../assets/custom3.png"
 import ModernTech from "../../../assets/modern4.png"
 
-function whyUs() {
+function WhyUs() {
   return (
     <div className="mx-5 xs:mx-12 sm:mx-20 md:mx-20 lg:mx-20 xl:mx-20 section-gap text-center">
       <h2 className="pb-3 xs:pb-5 sm:pb-7 md:pb-10 lg:pb-10 xl:pb-10 text-h2">Why <span className="text-yellow-400">Kode</span>Vana?</h2>
@@ -50,4 +50,4 @@ function whyUs() {
   )
 }
 
-export default whyUs
+export default WhyUs
