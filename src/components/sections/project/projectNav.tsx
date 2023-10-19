@@ -2,9 +2,8 @@ import { NavLink } from "react-router-dom"
 
 function ProjectNav() {
   return (
-    <div className="relative w-full text-center pb-7 bg-slate-900">
-      <h2 className="py-3 xs:py-5 sm:py-5 md:py-7 lg:py-7 xl:py-7 text-h2 text-white">Projects done by <span className="text-yellow-400">Kode</span>Vana</h2>
-      <nav className="mx-auto w-fit px-7 py-3 shadow-2xl rounded-lg bg-slate-950">
+    <div className="mt-1 xs:mt-2 sm:mt-4 md:mt-6 lg:mt-8 xl:mt-10 relative w-full text-center pb-2 xs:pb-3 sm:pb-5 md:pb-5 lg:pb-7 xl:pb-7 bg-white">
+      <nav className="mx-auto w-fit px-3 xs:px-3 sm:px-7 md:px-7 lg:px-7 xl:px-7 py-1 xs:py-2 sm:py-2 md:py-2 lg:py-3 xl:py-3 shadow-2xl rounded-lg bg-slate-950">
         <ul className="flex justify-center">
           <NavLink
             to="#"

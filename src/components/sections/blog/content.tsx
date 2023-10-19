@@ -1,95 +1,71 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 import { Img } from 'react-image';
+import ViewBlog from '../../ViewBlog';
+import P1_Img from "../../../assets/P2.png"   // Change this image with a not found sat emoji png yellow image
 
-interface BlogPost {
-  id: number;
+// Define a type for your blog data
+interface Blog {
+  _id: string;
   title: string;
-  thumbnail: string;
-  content: string;
+  desc: string;
   date: string;
+  category: string;
+  thumbnail: string;
 }
 
-function Content() {
-  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
-  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
-  const [loading, setLoading] = useState(true);
+const Content: React.FC = () => {
+  const [blogs, setBlogs] = useState<Blog[]>([]);
 
   useEffect(() => {
-    const fetchBlogPosts = async () => {
-      try {
-        const response = await axios.get('http://localhost:4000/blog/getAllPosts');
-        setBlogPosts(response.data);
-        setLoading(false);
-      } catch (error) {
-        console.error('Error fetching blog posts:', error);
-        setLoading(false);
-      }
-    };
-
-    fetchBlogPosts();
+    fetch('/api/getAllBlogs')
+      .then((response) => response.json())
+      .then((data: Blog[]) => {
+        setBlogs(data);
+      })
+      .catch((e) => {
+        console.error('Error fetching blogs:', e);
+      });
   }, []);
 
-  const openPost = (post: BlogPost) => {
-    setSelectedPost(post);
-  };
-
-  const closePost = () => {
-    setSelectedPost(null);
+  // View Blog
+  const [selectedBlog, setSelectedBlog] = useState<Blog | null>(null);
+  const handleBlogClick = (blog: Blog) => {
+    setSelectedBlog(blog);
   };
 
   return (
-    <div className="mx-2 xs:mx-7 sm:mx-10 md:mx-14 lg:mx-24 xl:mx-40 flex flex-wrap gap-1 section-gap justify-evenly">
-      <h2 className="text-3xl font-semibold mb-4"></h2>
-      {loading ? (
-        <div className="text-center mt-8">Loading...</div>
-      ) : (
-        blogPosts.length === 0 ? (
-          // Render this message when there are no blog posts
-          <div className="text-center mt-8 text-gray-500">No blog posts found.</div>
-        ) : (
-          <div className="gmt-10 w-full xs:w-full sm:w-1/3 md:w-1/3 lg:w-1/4 xl:w-1/4 rounded-md bg-slate-900 cursor-pointer">
-            {blogPosts.map((post) => (
-              <div key={post.id}>
-                <Img
-                  className="w-full overflow-hidden"
-                  src={post.thumbnail}
-                  alt={post.title}
-                />
-                <h3 className="py-3 text-h3 text-white">{post.title}</h3>
-                <p>{post.content.slice(0, 100)}...</p>
-                <button
-                  onClick={() => openPost(post)}
-                  className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600"
-                >
-                  Read More
-                </button>
-              </div>
-            ))}
+    <div className="mt-10 mx-20 flex flex-wrap gap-1 section-gap text-center justify-evenly">
+      {blogs.length === 0 ? (
+        // Default blog
+        <div className="mt-10 w-1/4 rounded-md cursor-pointer">
+          <div>
+            <h3 className='text-para mb-3 text-red-700'>Please refresh your page!</h3>
+            <Img
+              className="w-full overflow-hidden" // Task : Add a hover zoom effect on the image
+              src={P1_Img}
+              alt="Blog Image"
+            />
           </div>
-        )
-      )}
-      {selectedPost && (
-        <div className="bg-white p-4 shadow-md">
-          <h2 className="py-3 text-h3 text-white">{selectedPost.title}</h2>
-          <p className="text-slate-400">{selectedPost.date}</p>
-          <Img
-            className="w-full overflow-hidden"
-            src={selectedPost.thumbnail}
-            alt={selectedPost.title}
-          />
-          <p>{selectedPost.content}</p>
-          <button
-            onClick={closePost}
-            className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-full hover-bg-blue-600"
-          >
-            Close
-          </button>
         </div>
+      ) : (
+        // Map and display blogs
+        blogs.map((blog) => (
+          <div className="mt-10 w-1/4 rounded-md cursor-pointer" key={blog._id} onClick={() => handleBlogClick(blog)}>
+            <div>
+              <h3>{blog.title}</h3>
+              <p>{blog.desc}</p>
+              <Img
+                className="w-full overflow-hidden"
+                src={blog.thumbnail}
+                alt="Blog Image"
+              />
+            </div>
+            {selectedBlog && <ViewBlog blog={selectedBlog} />}
+          </div>
+        ))
       )}
     </div>
   );
 };
 
-
-export default Content
+export default Content;
