@@ -51,7 +51,7 @@ function Form() {
           <div className="">
             <div className="mt-3 xs:mt-5 sm:mt-5 md:mt-7 lg:mt-7 xl:mt-7 h-10 xs:h-12 sm:h-14 md:h-16 lg:h-16 xl:h-16 w-full relative rounded-xl">
               <input
-                className="pl-5 xs:pl-7 sm:pl-7 md:pl-7 lg:pl-7 xl:pl-7 pr-12 xs:pr-14 sm:pr-16 md:pr-16 lg:pr-16 xl:pr-16 py-4 xs:py-4 sm:py-5 md:py-5 lg:py-5 xl:py-5 w-full h-full text-para tracking-wide font-semibold border-0 text-slate-500 bg-slate-100 hover:bg-slate-200 rounded-xl"
+                className="pl-5 xs:pl-7 sm:pl-7 md:pl-7 lg:pl-7 xl:pl-7 pr-12 xs:pr-14 sm:pr-16 md:pr-16 lg:pr-16 xl:pr-16 py-4 xs:py-4 sm:py-5 md:py-5 lg:py-5 xl:py-5 w-full h-full text-para tracking-wide font-semibold border-0 text-slate-500 bg-slate-100 hover:bg-slate-200 rounded-xl transition duration-150"
                 type="text"
                 placeholder="Name"
                 name="Name"
@@ -61,7 +61,7 @@ function Form() {
             </div>
             <div className="mt-3 xs:mt-5 sm:mt-5 md:mt-7 lg:mt-7 xl:mt-7 h-10 xs:h-12 sm:h-14 md:h-16 lg:h-16 xl:h-16 w-full relative rounded-xl">
               <input
-                className="pl-5 xs:pl-7 sm:pl-7 md:pl-7 lg:pl-7 xl:pl-7 pr-12 xs:pr-14 sm:pr-16 md:pr-16 lg:pr-16 xl:pr-16 py-4 xs:py-4 sm:py-5 md:py-5 lg:py-5 xl:py-5 w-full h-full text-para tracking-wide font-semibold border-0 text-slate-500 bg-slate-100 hover:bg-slate-200 rounded-xl"
+                className="pl-5 xs:pl-7 sm:pl-7 md:pl-7 lg:pl-7 xl:pl-7 pr-12 xs:pr-14 sm:pr-16 md:pr-16 lg:pr-16 xl:pr-16 py-4 xs:py-4 sm:py-5 md:py-5 lg:py-5 xl:py-5 w-full h-full text-para tracking-wide font-semibold border-0 text-slate-500 bg-slate-100 hover:bg-slate-200 rounded-xl transition duration-150"
                 type="email"
                 placeholder="Email"
                 name="Email"
@@ -71,7 +71,7 @@ function Form() {
             </div>
             <div className="mt-3 xs:mt-5 sm:mt-5 md:mt-7 lg:mt-7 xl:mt-7 h-32 xs:h-36 sm:h-36 md:h-40 lg:h-44 xl:h-44 w-full relative rounded-xl">
               <textarea
-                className="pl-5 xs:pl-7 sm:pl-7 md:pl-7 lg:pl-7 xl:pl-7 pr-12 xs:pr-14 sm:pr-16 md:pr-16 lg:pr-16 xl:pr-16 py-4 xs:py-4 sm:py-5 md:py-5 lg:py-5 xl:py-5 text-para tracking-wide font-semibold border-0 text-slate-500 bg-slate-100 hover:bg-slate-200 rounded-xl resize-none scrollable-textarea"
+                className="pl-5 xs:pl-7 sm:pl-7 md:pl-7 lg:pl-7 xl:pl-7 pr-12 xs:pr-14 sm:pr-16 md:pr-16 lg:pr-16 xl:pr-16 py-4 xs:py-4 sm:py-5 md:py-5 lg:py-5 xl:py-5 text-para tracking-wide font-semibold border-0 text-slate-500 bg-slate-100 hover:bg-slate-200 rounded-xl resize-none scrollable-textarea transition duration-150"
                 placeholder="Message"
                 name="Message"
                 required
@@ -84,7 +84,7 @@ function Form() {
           <div className="mt-3 xs:mt-5 sm:mt-5 md:mt-7 lg:mt-7 xl:mt-7 flex gap-5 w-full">
             <div className="relative h-10 xs:h-11 sm:h-12 md:h-14 lg:h-16 xl:h-16 w-1/2 rounded-full">
 
-              <label className="relative inline-flex items-center px-3 xs:px-5 sm:px-7 md:px-7 lg:px-7 xl:px-7 text-h3 leading-4 w-full h-full text-slate-400 font-semibold bg-slate-100 hover:bg-slate-200 rounded-full text-center justify-center overflow-hidden">
+              <label className="relative inline-flex items-center px-3 xs:px-5 sm:px-7 md:px-7 lg:px-7 xl:px-7 text-h3 leading-4 w-full h-full text-slate-400 font-semibold bg-slate-100 hover:bg-slate-200 rounded-full text-center justify-center overflow-hidden transition duration-200">
                 <FontAwesomeIcon className="mr-2" icon={faPaperclip} />{" "}
                 {selectedAttachment ? selectedAttachment.name : "Add attachment"}
                 <input
@@ -96,7 +96,7 @@ function Form() {
 
             </div>
             <div className="relative h-10 xs:h-11 sm:h-12 md:h-14 lg:h-16 xl:h-16 w-1/2 rounded-full">
-              <button type="submit" className="px-3 xs:px-5 sm:px-7 md:px-7 lg:px-7 xl:px-7 text-h3 leading-4 w-full h-full text-white hover:text-yellow-400 font-semibold bg-yellow-400 hover:bg-slate-200 rounded-full">Send message</button>
+              <button type="submit" className="px-3 xs:px-5 sm:px-7 md:px-7 lg:px-7 xl:px-7 text-h3 leading-4 w-full h-full text-white hover:text-slate-100 font-semibold bg-yellow-400 hover:bg-slate-400 rounded-full transition duration-200">Send message</button>
             </div>
           </div>
         </form>

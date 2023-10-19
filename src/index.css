@@ -15,16 +15,16 @@
     @apply relative text-xl xl:text-2xl py-4 text-white font-semibold hover:text-yellow-400 cursor-pointer transition duration-500;
   }
 
-  .projectNavLi {
-    @apply px-2 xl:px-7 py-2 text-xs xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-base text-slate-300 hover:text-slate-50 rounded-md;
-  }
-
   .navbarUL {
     @apply absolute bottom-2 h-1 w-5 hidden bg-yellow-400 group-hover:block rounded-full transition duration-500;
   }
 
+  .projectNavLi {
+    @apply px-1 xs:px-2 sm:px-3 md:px-5 lg:px-7 xl:px-7 py-2 text-xs xs:text-sm sm:text-sm md:text-base lg:text-base xl:text-base text-slate-300 hover:text-slate-50 rounded-md;
+  }
+
   .projectNavUl {
-    @apply mt-3 h-1 w-full bg-slate-300 opacity-0 group-hover:opacity-100 group-hover:bg-slate-50 rounded-full transition duration-500;
+    @apply mt-2 sm:mt-3 h-1 w-full bg-slate-300 opacity-0 group-hover:opacity-100 group-hover:bg-slate-50 rounded-full transition duration-500;
   }
 
   .text-h2 {
