@@ -7,6 +7,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 // import ViewBlog from './components/ViewBlog';
 // import ViewProject from './components/ViewProject';
+import NotFound from './components/Notfound';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           {/* <Route path="/viewBlog" element={<ViewBlog />} /> */}
           {/* <Route path="/viewProject" element={<ViewProject />} /> */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </Router>
