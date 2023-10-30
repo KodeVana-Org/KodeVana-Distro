@@ -8,7 +8,5 @@ const {
 } = require("../controller/project.controller.js");
 
 router.get('/getAllProjects', getAllProjects);
-router.get('/getRecentThreeProjects', getRecentThreeProjects);
-router.get('/getRecentProject', getRecentProject);
 
 module.exports = router;

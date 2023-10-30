@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Home from './components/Home';
-import Blog from './components/Blogs';
-import Project from './components/Projects';
-import About from './components/About';
-import Contact from './components/Contact';
-// import ViewBlog from './components/ViewBlog';
-// import ViewProject from './components/ViewProject';
-import NotFound from './components/Notfound';
+import Home from './pages/Home';
+import Blog from './pages/Blogs';
+import Project from './pages/Projects';
+import About from './pages/About';
+import Contact from './pages/Contact';
+// import ViewBlog from './pages/ViewBlog';
+// import ViewProject from './pages/ViewProject';
+import NotFound from './pages/Notfound';
 
 
 function App() {

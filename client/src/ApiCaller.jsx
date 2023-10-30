@@ -1,24 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-// Recent Blog
-export const RecentBlog = () => {
-  const [recentBlog, setRecentBlog] = useState([]);
-  const callGetRecentBlog = () => {
-    axios.get('http://localhost:8002/api/getRecentBlog')
-      .then((response) => {
-        setRecentBlog(response.data);
-      })
-      .catch((error) => {
-        console.error('Error retrieving recent blog:', error);
-      });
-  };
-  useEffect(() => {
-    callGetRecentBlog();
-  }, []);
-  return recentBlog;
-};
-
 // All Blogs
 export const AllBlogs = () => {
   const [allBlogs, setAllBlogs] = useState([]);
@@ -35,42 +17,6 @@ export const AllBlogs = () => {
     callGetAllBlogs();
   }, []);
   return allBlogs;
-};
-
-// Recent Project
-export const RecentProject = () => {
-  const [recentProject, setRecentProject] = useState([]);
-  const callGetRecentProject = () => {
-    axios.get('http://localhost:8002/api/getRecentProject')
-      .then((response) => {
-        setRecentProject(response.data);
-      })
-      .catch((error) => {
-        console.error('Error retrieving recent Project:', error);
-      });
-  };
-  useEffect(() => {
-    callGetRecentProject();
-  }, []);
-  return recentProject;
-};
-
-// Recent ThreeProjects
-export const RecentThreeProjects = () => {
-  const [recentThreeProjects, setRecentThreeProjects] = useState([]);
-  const callGetRecentThreeProjects = () => {
-    axios.get('http://localhost:8002/api/getRecentThreeProjects')
-      .then((response) => {
-        setRecentThreeProjects(response.data);
-      })
-      .catch((error) => {
-        console.error('Error retrieving recent ThreeProjects:', error);
-      });
-  };
-  useEffect(() => {
-    callGetRecentThreeProjects();
-  }, []);
-  return recentThreeProjects;
 };
 
 // All Projects
