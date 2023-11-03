@@ -1,39 +1,56 @@
-import { Img } from "react-image";
-import { NavLink } from 'react-router-dom';
-import { AllBlogs } from '../../ApiCaller';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useParams, } from 'react-router-dom';
 
-function FreshInk() {
-  const recentBlog = AllBlogs();
 
-  if (recentBlog.length === 0) {
-    return (
-      <div className="pt-2 md:pt-7 section-gap text-center bg-slate-900">
-        <p className="text-yellow-500 text-2xl">Blog not found, please refresh this page!</p>
-      </div>
-    );
-  }
+
+function IndividualBlogPost() {
+  const [post, setPost] = useState(null);
+  const { id } = useParams();
+
+  useEffect(() => {
+    const fetchBlogPost = async () => {
+      try {
+        const response = await axios.get(`http://kodevana.com:8002/admin/blog/${id}`);
+        setPost(response.data);
+      } catch (error) {
+        console.error('Error fetching blog post:', error);
+      }
+    };
+
+    fetchBlogPost();
+  }, [id]);
+
+  const goBack = () => {
+    window.history.back(); // Go back to the previous page in the browser's history
+  };
+
+  
 
   return (
-    <div className="px-2 xs:px-7 sm:px-10 md:px-16 lg:px-24 xl:px-40 section-gap text-center bg-slate-900">
-      <h2 className="py-3 xs:py-5 sm:py-5 md:py-7 lg:py-7 xl:py-7 text-h2 text-yellow-400">Blog Spot</h2>
-      <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-2 xs:gap-3 sm:gap-5 md:gap-7 lg:gap-10 xl:gap-16">
-        <div className="w-full">
-          <h3 className="text-h3 text-yellow-400">{recentBlog.title}</h3>
-          <p className="my-2 xs:my-2 sm:my-2 md:my-4 lg:my-7 xl:my-10 text-para text-white">{recentBlog.desc}</p>
-          <NavLink to="">
-            <button className="btn transition duration-200 ease-in-out hover:bg-slate-500">
-              Read
-            </button>
-          </NavLink>
-          <Img
-            className="mx-auto w-2/3 xs:w-1/2 sm:w-full md:w-full lg:w-full xl:w-full"
-            src={recentBlog.thumbnail}
-            alt="Tech Graphics Image"
+    <div className="p-4">
+      {post ? (
+        <div>
+          <h2 className="text-2xl font-semibold mb-2">{post.title}</h2>
+          <p className="text-gray-600 mb-2">{post.date}</p>
+          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        
+          {/* <div
+            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.content) }}
           />
+          */}
+          <button
+            onClick={goBack}
+            className="mt-4 bg-blue-500 text-slate-50 px-4 py-2 rounded-full hover-bg-blue-600"
+          >
+            Go Back
+          </button>
         </div>
-      </div>
+      ) : (
+        <div>Loading...</div>
+      )}
     </div>
   );
 }
 
-export default FreshInk;
+export default IndividualBlogPost;

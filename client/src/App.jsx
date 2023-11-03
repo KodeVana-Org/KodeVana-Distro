@@ -8,6 +8,8 @@ import Contact from './pages/Contact';
 // import ViewBlog from './pages/ViewBlog';
 // import ViewProject from './pages/ViewProject';
 import NotFound from './pages/Notfound';
+import IndividualBlogPost from './components/page_blog/freshInk';
+
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           {/* <Route path="/viewBlog" element={<ViewBlog />} /> */}
           {/* <Route path="/viewProject" element={<ViewProject />} /> */}
+          <Route path="/blog/:id" element={<IndividualBlogPost />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

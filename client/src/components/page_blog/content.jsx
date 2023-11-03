@@ -1,39 +1,72 @@
-import { Img } from 'react-image';
-import { AllBlogs } from '../../ApiCaller';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
 
-const Content = () => {
-  const allBlogs = AllBlogs();
+function Content() {
+  const [blogPosts, setBlogPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // View Blog
-  const handleBlogClick = (blog) => {
-    // Pass blog data to ViewBlog or perform any other action
-  };
+  useEffect(() => {
+    const fetchBlogPosts = async () => {
+      try {
+        const response = await axios.get(
+          "http://kodevana.com:8002/admin/blog-all"
+        );
+        setBlogPosts(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching blog posts:", error);
+        setLoading(false);
+      }
+    };
 
-  if (allBlogs.length === 0) {
-    return (
-      <div className="pt-2 md:pt-7 section-gap text-center">
-        <p className="text-yellow-500 text-2xl">Blog not found, please refresh this page!</p>
-      </div>
-    );
-  }
+    fetchBlogPosts();
+  }, []);
+  console.log("blogPosts:", blogPosts);
 
   return (
-    <div className="mt-10 mx-20 flex flex-wrap gap-1 section-gap text-center justify-evenly">
-      {allBlogs.map((blog) => (
-        <div className="mt-10 w-1/4 rounded-md cursor-pointer" key={blog._id} onClick={() => handleBlogClick(blog)}>
-          <div>
-            <h3>{blog.title}</h3>
-            <p>{blog.desc}</p>
-            <Img
-              className="w-full overflow-hidden"
-              src={blog.thumbnail}
-              alt="Blog Image"
-            />
-          </div>
-        </div>
-      ))}
+    <div className="mt-10 mx-20 section-gap">
+
+      <div className="flex flex-wrap gap-1 text-center justify-evenly">
+        {blogPosts.length > 0 ? (
+          blogPosts.map((post) => (
+            <div
+              key={post.id}
+              className="mt-10 w-1/4 rounded-md cursor-pointer"
+            >
+              <h3 className="text-h3 mb-2">{post.title}</h3>
+              <Img
+                className="w-full overflow-hidden"
+                src={post.thumbnail}
+                alt={post.title}
+              />
+              <p className="text-para mb-5">{convertHtmlToPlainText(post.content, 100)}...</p>
+              <Link to={`/blog/${post._id}`} className="mt-4 bg-yellow-400 text-slate-50 px-4 py-2 rounded-full hover:bg-slate-500">
+                Read More
+              </Link>
+            </div>
+          ))
+        ) : (
+          <div className="text-h3">Stay tune for our exciting blogs coming up soon!</div>
+        )}
+      </div>
+
     </div>
   );
 }
+function convertHtmlToPlainText(html, maxLength) {
+  // Create a DOMParser to parse the HTML
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, 'text/html');
 
+  // Extract text content from the parsed HTML
+  const text = doc.body.textContent;
+
+  // Limit the text length to a maximum length (e.g., maxLength)
+  if (maxLength && text.length > maxLength) {
+    return text.slice(0, maxLength) + '...';
+  }
+
+  return text;
+}
 export default Content;
