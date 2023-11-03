@@ -78,8 +78,8 @@ function Footer() {
           </a>
         </p>
         <p className="mb-2 sm:mb-3">
-          +91 XXXXXXXXXX <span className="text-yellow-400">{'\u00a0'}{'\u00a0'}|{'\u00a0'}{'\u00a0'}</span>
-          +91 XXXXXXXXXX
+          +91 9365646114 <span className="text-yellow-400">{'\u00a0'}{'\u00a0'}|{'\u00a0'}{'\u00a0'}</span>
+          +91 7002436557
         </p>
         <div className="sm:flex">
           <p className="text-yellow-400">Connect with us :</p>

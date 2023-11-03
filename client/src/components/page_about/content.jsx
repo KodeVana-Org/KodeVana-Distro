@@ -1,14 +1,14 @@
 import { useInView } from 'react-intersection-observer';
 import "../../styles/Animate.css"
 
-function AnimateQuote() {
+function Content() {
   const [ref, inView] = useInView({
     threshold: 0,
   });
 
   return (
     <div className="mx-2 xs:mx-7 sm:mx-10 md:mx-16 lg:mx-24 xl:mx-40 section-gap">
-      <div className='md:grid grid-cols-2 gap-5'>
+      <div className='md:grid grid-cols-2 gap-10'>
         <div ref={ref} className={`animated-div-1 ${inView ? 'slide-in' : ''} px-3 py-7 xs:py-16 sm:py-24 md:py-32 lg:py-36 xl:py-40 relative text-center bg-slate-700 rounded-md`}>
           <h3 className="text-yellow-400 text-h3">Move fast and break things</h3>
           <p className="pt-3 pb-1 text-para text-slate-50 font-semibold">- Mark Zuckerberg</p>
@@ -23,4 +23,4 @@ function AnimateQuote() {
   )
 }
 
-export default AnimateQuote
+export default Content

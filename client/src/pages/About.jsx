@@ -1,6 +1,6 @@
 import NavBar from "../components/mainNav"
 import Heading from "../components/page_about/heading.jsx";
-import Quote from "../components/page_about/animateQuote.jsx";
+import Content from "../components/page_about/content.jsx";
 import Footer from '../components/footer';
 
 function About() {
@@ -8,7 +8,7 @@ function About() {
     <div>
       <NavBar />
       <Heading />
-      <Quote />
+      <Content />
       <Footer />
     </div>
   )
