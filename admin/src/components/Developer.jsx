@@ -44,7 +44,7 @@ function AddDeveloper() {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/admin/new-developer",
+        "http://malig.kodevana.com:8002/admin/new-developer",
         formData
       );
       if (response.data.success) {

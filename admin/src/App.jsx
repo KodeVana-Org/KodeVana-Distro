@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css'; // Import the CSS for styling
 import Login from "./components/Login";
 import Home from "./components/Home";
 import "./style.css";
+import UiDesign from "./components/UiDesign"
 import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 import Project from "./components/Projects";
@@ -12,6 +13,7 @@ import Review from "./components/Reviews";
 import Privatecom from "./components/Private";
 import Calendar from "./components/Calender";
 import Developer from "./components/Developer";
+import Dev from "./components/UpdateDelEmp"
 
 
 function App() {
@@ -28,10 +30,11 @@ function App() {
             <Route path="/review" element={<Review />} />
             <Route path="/blog-post" element={<Blog />} />
             <Route path="/calender" element={<Calendar />} />
+            <Route path="/ui" element={<UiDesign />} />
            
 
           </Route>
-          <Route path="/login" element={<Login />} />
+          <Route path="/admin/login" element={<Login />} />
         </Routes>
       </Router>
     </>

@@ -35,7 +35,7 @@ function Projects() {
       formData.append("category", category);
 
       const response = await axios.post(
-        "http://localhost:4000/admin/create-projects",
+        "http://malig.kodevana.com:8002/admin/create-projects",
         formData
       );
 

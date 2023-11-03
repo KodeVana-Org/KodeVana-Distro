@@ -2,6 +2,8 @@ import React, { useState, useEffect,  } from 'react';
 import {useNavigate} from 'react-router-dom'
 import axios from 'axios';
 import { useSharedContext } from '../Context';
+import ContactReceived from './ContactReceived';
+
 
 
 const Contact = () => {
@@ -15,7 +17,7 @@ const Contact = () => {
   useEffect(() => {
     async function fetchSubmissions() {
       try {
-        const response = await axios.get('http://localhost:4000/admin/get-form');
+        const response = await axios.get('http://malig.kodevana.com:8002/admin/get-form');
         setSubmissions(response.data.submissions);
 
         const totalContacts = response.data.submissions.length;
@@ -30,7 +32,7 @@ const Contact = () => {
 
   const handleDelete = async (submissionId) => {
     try {
-      await axios.delete(`http://localhost:4000/admin/delete-form/${submissionId}`);
+      await axios.delete(`http://malig.kodevana.com:8002/admin/delete-form/${submissionId}`);
       // Update the submissions list after successful deletion
       setSubmissions(submissions.filter(submission => submission._id !== submissionId));
     } catch (error) {
@@ -50,8 +52,7 @@ const Contact = () => {
     <div className="p-4 px-[25%]">
       <h1 className="text-2xl font-semibold ml-10 mb-4">Received contact form</h1>
       <ul className="space-y-4 text-center">
-        { submissions.length > 0 ? (
-        submissions.map((submission, index) => (
+        {submissions.map((submission, index) => (
           <li
             key={index}
             className="border p-4 rounded shadow-md bg-white relative"
@@ -82,12 +83,12 @@ const Contact = () => {
             </div>
              
           </li>
-        )))
-        : (
-          <p>No form available</p>
-        )}
-        
+        ))}
+       
       </ul>
+    </div>
+    <div>
+            <ContactReceived />
     </div>
     </>
   );

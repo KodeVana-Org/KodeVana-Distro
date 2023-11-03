@@ -45,8 +45,20 @@ const Navbar = () => {
           </li>
       
           <li>
-            <Link to="/login" onClick={logout} className=" hover:text-blue-950 transition-all duration-200 relative group">
+            <Link to="/admin/login" onClick={logout} className=" hover:text-blue-950 transition-all duration-200 relative group">
               logout
+            </Link>
+
+          </li>
+          <li>
+            <Link to="/calender" onClick={logout} className=" hover:text-blue-950 transition-all duration-200 relative group">
+             Calender
+            </Link>
+
+          </li>
+          <li>
+            <Link to="/ui" onClick={logout} className=" hover:text-blue-950 transition-all duration-200 relative group">
+              ui
             </Link>
 
           </li>
