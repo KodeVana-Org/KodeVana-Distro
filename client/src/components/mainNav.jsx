@@ -12,7 +12,7 @@ const NavBar = () => {
 
   return (
     <div className="relative flex bg-slate-900 justify-center md:py-3">
-      <div className="relative md:py-3 w-full md:w-fit md:px-7 flex items-center justify-center bg-slate-950 rounded-md shadow-2xl">
+      <div className="relative md:py-2 w-full md:w-fit md:px-7 flex items-center justify-center bg-slate-950 rounded-md shadow-2xl">
         {/* Logo */}
         <div className="md:mr-10 lg:mr-40 py-2 xl:py-3">
           <NavLink to="/">

@@ -20,7 +20,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://localhost:4000/admin/loginadmin', {
+      const response = await axios.post('http://malig.kodevana.com:8002/admin/loginadmin', {
         email,
         password,
       });

@@ -11,7 +11,7 @@ const VisitorGraph = () => {
 
   const fetchVisitorData = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/app/get');
+      const response = await axios.get('http://malig.kodevana.com:8002/app/get');
       setVisitorData(response.data);
     } catch (error) {
       console.error('Error fetching visitor data:', error);

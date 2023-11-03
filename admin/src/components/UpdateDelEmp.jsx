@@ -18,7 +18,7 @@ const DeveloperManagement = () => {
   const fetchDevelopers = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:4000/admin/get-all-dev"
+        "http://malig.kodevana.com:8002/admin/get-all-dev"
       );
       setDevelopers(response.data);
     } catch (error) {
@@ -37,7 +37,7 @@ const DeveloperManagement = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:4000/admin/update-dev/${developerId}`,formData
+        `http://malig.kodevana.com:8002/admin/update-dev/${developerId}`,formData
         
       );
       
@@ -70,7 +70,7 @@ const DeveloperManagement = () => {
   const handleDelete = async (developerId) => {
     try {
       const response = await axios.delete(
-        `http://localhost:4000/admin/delete-developer/${developerId}`
+        `http://malig.kodevana.com:8002/admin/delete-developer/${developerId}`
       );
 
       if (response.data.data) {

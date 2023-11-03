@@ -37,7 +37,7 @@ const Blog = () => {
 
   const postArticle = async () => {
     try {
-      await axios.post("http://localhost:4000/admin/create-blog", {
+      await axios.post("http://malig.kodevana.com:8002/admin/create-blog", {
         title,
         content: editorHtml,
       });

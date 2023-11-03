@@ -17,7 +17,7 @@ const VideoUpload = () => {
     formData.append('video', video);
 
     try {
-      await axios.post('http://localhost:4000/app/video-upload', formData, {
+      await axios.post('http://malig.kodevana.com:8002/app/video-upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

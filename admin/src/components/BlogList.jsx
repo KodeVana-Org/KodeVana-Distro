@@ -11,7 +11,7 @@ const BlogTitles = () => {
     async function fetchBlogTitles() {
       try {
         const response = await axios.get(
-          "http://localhost:4000/admin/blog-all"
+          "http://malig.kodevana.com:8002/admin/blog-all"
         );
         setBlogTitles(response.data);
         const totalBlogs = response.data.length;
@@ -26,7 +26,7 @@ const BlogTitles = () => {
 
   const handleDelete = async (_id) => {
     try {
-      await axios.delete(`http://localhost:4000/admin/delete-blog/${_id}`);
+      await axios.delete(`http://malig.kodevana.com:8002/admin/delete-blog/${_id}`);
       if (blogTitles.length > 0) {
         setBlogTitles((prevBlogTitles) =>
           prevBlogTitles.filter((title) => title._id !== _id)

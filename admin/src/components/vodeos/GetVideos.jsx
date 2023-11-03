@@ -7,7 +7,7 @@ const VideoList = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:4000/app/get-video').then((response) => {
+    axios.get('http://malig.kodevana.com:8002/app/get-video').then((response) => {
       setVideos(response.data);
       setIsLoading(false);
     });

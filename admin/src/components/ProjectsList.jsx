@@ -15,7 +15,7 @@ const ProjectsList = () => {
 
   const fetchProjects = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/admin/getallProjects');
+      const response = await axios.get('http://malig.kodevana.com:8002/admin/getallProjects');
       setProjects(response.data.projects);
       const totalProject = response.data.projects.length;
        setTotalProject(totalProject);
@@ -30,7 +30,7 @@ const ProjectsList = () => {
     if (confirmDelete) {
       try {
         setIsDeleting(true);
-        await axios.delete(`http://localhost:4000/admin/delete/${projectId}`);
+        await axios.delete(`http://malig.kodevana.com:8002/admin/delete/${projectId}`);
         fetchProjects();
       } catch (error) {
         console.error('Error deleting project:', error);
@@ -43,7 +43,7 @@ const ProjectsList = () => {
   const handleDeleteReview = async (projectId, reviewId) => {
     try {
       setIsDeleting(true);
-      const response = await axios.delete(`http://localhost:4000/admin/reviews/${reviewId}`);
+      const response = await axios.delete(`http://malig.kodevana.com:8002/admin/reviews/${reviewId}`);
       if (response.data.success) {
         // Refresh the projects list to reflect the deleted review
         fetchProjects();
