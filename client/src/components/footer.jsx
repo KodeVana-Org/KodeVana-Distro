@@ -84,7 +84,7 @@ function Footer() {
         <div className="sm:flex">
           <p className="text-yellow-400">Connect with us :</p>
 
-          <a href="https://www.facebook.com/kodevana/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/profile.php?id=100089674457660&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
             <button className="ml-5">
               <Img
                 className="w-8 h-8"

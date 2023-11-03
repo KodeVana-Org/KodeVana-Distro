@@ -1,7 +1,7 @@
 import { Img } from "react-image"
-import fbLogo from "../../assets/SocialIcons/Facebook-Logo.png"
-import instaLogo from "../../assets/SocialIcons/Instagram-Logo.png"
-import linkedInLogo from "../../assets/SocialIcons/LinkedIn-Logo.png"
+import facebookLogo from "../../assets/SocialIcons/Facebook-Logo.png"
+import instagramLogo from "../../assets/SocialIcons/Instagram-Logo.png"
+import linkedinLogo from "../../assets/SocialIcons/LinkedIn-Logo.png"
 import twitterLogo from "../../assets/SocialIcons/Twitter-Logo.png"
 
 function FollowUp() {
@@ -19,34 +19,42 @@ function FollowUp() {
       <div className="mt-3 xs:mt-3 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0 grid grid-rows-2 xs:grid-rows-1 sm:grid-rows-1 md:grid-rows-2 lg:grid-rows-2 xl:grid-rows-2 col-span-1 text-center">
         <h3 className="text-h3">Also, follow us on</h3>
         <div className="">
-          <button>
-            <Img
-              className="h-7 xs:h-9 sm:h-10 md:h-9 lg:h-10 xl:h-10"
-              src={fbLogo}
-              alt="Tech Graphics Image"
-            />
-          </button>
-          <button className="ml-2 mr-1">
-            <Img
-              className="h-7 xs:h-9 sm:h-10 md:h-9 lg:h-10 xl:h-10"
-              src={instaLogo}
-              alt="Tech Graphics Image"
-            />
-          </button>
-          <button className="ml-1 mr-2">
-            <Img
-              className="h-7 xs:h-9 sm:h-10 md:h-9 lg:h-10 xl:h-10"
-              src={linkedInLogo}
-              alt="Tech Graphics Image"
-            />
-          </button>
-          <button>
-            <Img
-              className="h-7 xs:h-9 sm:h-10 md:h-9 lg:h-10 xl:h-10"
-              src={twitterLogo}
-              alt="Tech Graphics Image"
-            />
-          </button>
+          <a href="https://www.facebook.com/profile.php?id=100089674457660&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
+            <button>
+              <Img
+                className="h-7 xs:h-9 sm:h-10 md:h-9 lg:h-10 xl:h-10"
+                src={facebookLogo}
+                alt="Tech Graphics Image"
+              />
+            </button>
+          </a>
+          <a href="https://www.instagram.com/kodevana/" target="_blank" rel="noopener noreferrer">
+            <button className="ml-2 mr-1">
+              <Img
+                className="h-7 xs:h-9 sm:h-10 md:h-9 lg:h-10 xl:h-10"
+                src={instagramLogo}
+                alt="Tech Graphics Image"
+              />
+            </button>
+          </a>
+          <a href="https://www.linkedin.com/in/kodevana/" target="_blank" rel="noopener noreferrer">
+            <button className="ml-1 mr-2">
+              <Img
+                className="h-7 xs:h-9 sm:h-10 md:h-9 lg:h-10 xl:h-10"
+                src={linkedinLogo}
+                alt="Tech Graphics Image"
+              />
+            </button>
+          </a>
+          <a href="https://www.twitter.com/kodevana/" target="_blank" rel="noopener noreferrer">
+            <button>
+              <Img
+                className="h-7 xs:h-9 sm:h-10 md:h-9 lg:h-10 xl:h-10"
+                src={twitterLogo}
+                alt="Tech Graphics Image"
+              />
+            </button>
+          </a>
         </div>
       </div>
 
