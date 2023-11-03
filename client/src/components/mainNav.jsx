@@ -1,5 +1,3 @@
-// Router link not set
-
 import { useState } from "react";
 import { NavLink } from 'react-router-dom';
 import { Img } from "react-image";
@@ -13,20 +11,20 @@ const NavBar = () => {
   };
 
   return (
-    <div className="relative flex bg-slate-900 justify-center py-3">
-      <div className="relative w-60 xs:w-72 sm:w-96 md:w-fit lg:w-fit xl:w-fit md:px-7 lg:px-7 xl:px-7 flex items-center justify-center bg-slate-950 rounded-md shadow-2xl">
+    <div className="relative flex bg-slate-900 justify-center md:py-3">
+      <div className="relative md:py-3 w-full md:w-fit md:px-7 flex items-center justify-center bg-slate-950 rounded-md shadow-2xl">
         {/* Logo */}
-        <div className="md:mr-10 lg:mr-40 xl:mr-40 py-2 xl:py-3">
+        <div className="md:mr-10 lg:mr-40 py-2 xl:py-3">
           <NavLink to="/">
-            <p className="text-yellow-400 text-2xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl font-bold">
-              Kode<span className="text-white">Vana</span>
+            <p className="text-yellow-400 text-3xl xs:text-4xl xl:text-5xl font-bold">
+              Kode<span className="text-slate-50">Vana</span>
             </p>
           </NavLink>
         </div>
 
         {/* Nav Items */}
-        <div className="flex text-white">
-          <ul className="hidden md:inline-flex lg:inline-flex xl:inline-flex md:gap-3 lg:gap-7 xl:gap-7">
+        <div className="flex py-5 md:p-0 text-slate-50">
+          <ul className="hidden md:inline-flex md:gap-3 lg:gap-7">
             <NavLink
               to="/"
             >
@@ -62,9 +60,9 @@ const NavBar = () => {
           </ul>
 
           {/* Menu Button */}
-          <div className="inline-flex md:hidden lg:hidden xl:hidden">
+          <div className="inline-flex md:hidden">
             <Img
-              className="w-7 xs:w-8 sm:w-9 h-7 xs:h-8 sm:h-9 p-1 ml-7 rounded-md bg-slate-700 hover:shadow-xl"
+              className="w-8 sm:w-9 h-8 sm:h-9 p-1 ml-7 rounded-md bg-slate-700 hover:shadow-xl"
               src={Menu_btn}
               alt="Menu Button"
               onClick={toggleMenu}
@@ -75,8 +73,8 @@ const NavBar = () => {
         {/* Menu bar for small screens */}
         {isMenuOpen && (
 
-          <div className="absolute w-60 xs:w-72 sm:w-96 py-3 rounded-md top-10 xs:top-11 sm:top-12 md:hidden text-center lg:hidden xl:hidden bg-slate-950 z-10">
-            <ul className="text-base font-bold leading-5 text-white">
+          <div className="absolute w-full py-3 rounded-b-md top-14 xs:top-16 md:hidden text-center bg-slate-950 z-10">
+            <ul className="text-base font-bold leading-5 text-slate-50">
               <li className="">
                 <NavLink to="/">
                   Home
@@ -97,7 +95,7 @@ const NavBar = () => {
                   About
                 </NavLink>
               </li>
-              <li className="mt-5 mb-2">
+              <li className="mt-5 mb-5">
                 <NavLink to="/Contact">
                   Contact
                 </NavLink>
