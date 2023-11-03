@@ -5,8 +5,33 @@ import Facebook_logo from "../assets/SocialIcons/Facebook-Logo.png"
 import Instagram_logo from "../assets/SocialIcons/Instagram-Logo.png"
 import Linkedin_logo from "../assets/SocialIcons/LinkedIn-Logo.png"
 import Twitter_logo from "../assets/SocialIcons/Twitter-Logo.png"
+import { useState } from "react";
+
 
 function Footer() {
+
+  
+  const [email, setEmail] = useState('');
+  const [sent, setSent] = useState(false);
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const sendEmail = async() => {
+    
+    const apiUrl = 'http://kodevana.com:8002/admin/loginadmin';
+
+    await axios.post(apiUrl, { email })
+      .then((response) => {
+        setSent(true);
+        console.log('Email sent successfully:', response.data);
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+      });
+  };
+  
   return (
     <div className="px-5 sm:px-10 py-7 sm:py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-0 sm:gap-2 lg:grid-cols-6 bg-slate-900">
 
@@ -62,14 +87,20 @@ function Footer() {
         <h3 className="footer-h2">Contacts</h3>
         <p className="mb-2 sm:mb-3">Drop your mail ID and our team will reach you shortly</p>
         <div className="mb-2 sm:mb-3 flex">
-          <input className="h-7 sm:h-10 px-4 py-3 w-full sm:w-3/4 md:w-2/3 lg:w-3/4 font-semibold text-slate-600 outline-none rounded-l-md" type="mail" placeholder="Enter your mail ID" />
-          <button type="submit">
-            <Img
-              className="h-7 sm:h-10 px-2 py-1 bg-slate-500 rounded-r-md"
-              src={Arrow_btn}
-              alt="Arrow Graphics"
-            />
-          </button>
+         <input
+          className="h-7 sm:h-10 md:h-10 lg:h-10 xl:h-10 px-4 py-2 w-full sm:w-3/4 md:w-2/3 lg:w-3/4 xl:w-3/4 font-semibold text-slate-600 outline-none rounded-l-md"
+          type="email"
+          placeholder="Enter your mail ID"
+          value={email}
+          onChange={handleEmailChange}
+        />
+        <button onClick={sendEmail} type="submit">
+          <img
+            className="h-7 sm:h-10 md:h-10 lg:h-10 xl:h-10 px-2 py-1 bg-slate-500 rounded-r-md"
+            src={Arrow_btn}
+            alt="Arrow Graphics"
+          />
+        </button>
         </div>
         <p className="mb-2 sm:mb-3">
           Or you can contact via mail :
