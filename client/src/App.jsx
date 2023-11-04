@@ -5,12 +5,8 @@ import Blog from './pages/Blogs';
 import Project from './pages/Projects';
 import About from './pages/About';
 import Contact from './pages/Contact';
-// import ViewBlog from './pages/ViewBlog';
-// import ViewProject from './pages/ViewProject';
+import ViewBlog from './pages/ViewBlog';
 import NotFound from './pages/Notfound';
-import IndividualBlogPost from './components/page_blog/freshInk';
-
-
 
 function App() {
   return (
@@ -22,10 +18,7 @@ function App() {
           <Route path="/project" element={<Project />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          {/* <Route path="/viewBlog" element={<ViewBlog />} /> */}
-          {/* <Route path="/viewProject" element={<ViewProject />} /> */}
-          <Route path="/blog/:id" element={<IndividualBlogPost />} />
-
+          <Route path="/blog/:id" element={<ViewBlog />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

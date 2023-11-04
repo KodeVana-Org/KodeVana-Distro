@@ -20,7 +20,7 @@
   }
 
   .projectNavLi {
-    @apply px-1 xs:px-2 sm:px-3 md:px-5 lg:px-7 py-2 text-xs xs:text-sm md:text-base text-slate-300 hover:text-slate-50 rounded-md;
+    @apply px-1 xs:px-2 sm:px-3 md:px-5 lg:px-7 py-2 text-base md:text-lg text-slate-300 hover:text-slate-50 rounded-md;
   }
 
   .projectNavUl {

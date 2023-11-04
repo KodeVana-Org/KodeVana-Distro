@@ -3,6 +3,7 @@ import axios from "axios";
 import { useInView } from "react-intersection-observer";
 
 import '../../styles/Animate.css'
+import '../../styles/loadingAnimation.css'
 
 function Content() {
   const [projects, setProjects] = useState({ projects: [] });
@@ -42,15 +43,14 @@ function Content() {
 
   return (
     <>
-
       <div className="section-gap text-center" >
-        <div className="px-5 xs:px-7 sm:px-10 lg:px-24 xl:px-40 relative w-full text-center pb-7 mb-[106px] bg-slate-900">
-          <h2 className="py-3 xs:py-5 sm:py-5 md:py-7 lg:py-7 xl:py-7 text-h2 text-slate-50">
+        <div className="px-5 xs:px-7 sm:px-10 lg:px-24 xl:px-40 relative w-full text-center pb-7 mb-3 sm:mb-7 md:mb-14 bg-slate-900">
+          <h2 className="py-3 xs:py-5 md:py-7 text-h2 text-slate-50">
             Projects done by <span className="text-yellow-400">Kode</span>Vana
           </h2>
 
 
-          <nav className="mx-auto w-fit px-7 py-3 shadow-2xl rounded-lg bg-slate-950">
+          <nav className="w-full px-2 sm:px-7 sm:py-3 shadow-2xl rounded-md bg-slate-950">
             <ul className="flex justify-center">
               <button
                 onClick={() => handleCategorySelect("ALL")}
@@ -84,19 +84,25 @@ function Content() {
           </nav>
         </div>
         {loading ? (
-          <div>Loading...</div>
+          <div className="loading-container">
+            <div className="loading-dots">
+              <div className="loading-dot"></div>
+              <div className="loading-dot"></div>
+              <div className="loading-dot"></div>
+            </div>
+          </div>
         ) : (
-          <div>
+          <div className="mx-5 xs:mx-10 sm:mx-20 md:mx-0 lg:mx-7 xl:mx-16 flex flex-wrap gap-7 text-center justify-center">
             {filteredProjects.length > 0 ? (
               filteredProjects.map((project, index) => (
                 <div
                   key={index}
-                  className="w-1/4 rounded-md cursor-pointer"
+                  className="w-full md:w-1/3 xl:w-1/4 rounded-md overflow-hidden"
                 >
                   <h3 className="text-h3">{project.title}</h3>
                   <p className="text-para">{project.desc}</p>
-                  <Img
-                    className="w-full overflow-hidden"
+                  <img
+                    className="w-full h-full overflow-hidden"
                     src={project.thumbnail.url}
                     alt={project.title}
                   />

@@ -1,4 +1,3 @@
-import { Img } from "react-image";
 import img1 from "../../assets/Homeimg1.png";
 import { NavLink } from "react-router-dom";
 
@@ -9,7 +8,7 @@ function Hero() {
 
         {/* Right Div */}
         <div className="h-fit px-10 xs:px-20 sm:px-48 md:px-0 order-1 md:order-2">
-          <Img
+          <img
             className=""
             src={img1}
             alt="Tech Graphics Image"
