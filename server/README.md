@@ -1,3 +1,2 @@
-# KodeVana-Distro-Server
-Server for KodeVana distro website
-## Update readme file
+# KodeVana-Distro
+KodeVana Official website

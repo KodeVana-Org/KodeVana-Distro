@@ -14,11 +14,8 @@ const contactSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  attachement: {
-    url: {
-      type: String,
-      required: true
-    }
+  attachment: {
+    type: String,
   },
   createdAt: {
     type: Date,
@@ -26,4 +23,6 @@ const contactSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Contact", contactSchema);
+const Contact = mongoose.model("Contact", contactSchema);
+
+module.exports = Contact;

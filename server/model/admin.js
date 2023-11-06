@@ -1,3 +1,4 @@
+// admin.js (in the model folder)
 
 const mongoose = require("mongoose");
 
@@ -16,12 +17,27 @@ const adminSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  // images: {
+  //   url:{
+  //     type:String,
+  //     required:true
+  //   }
+  //   },
+  // text: { 
+  //   type: String,
+  //    required: true 
+  // },
+
   token: {
     type: String,
   },
   role:{
     type:String,
+    
   }
+
 });
 
-module.exports = mongoose.model("Admin", adminSchema);
+const User = mongoose.model("User", adminSchema);
+
+module.exports = User;

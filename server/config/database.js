@@ -1,20 +1,17 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
+
 require("dotenv").config();
-
-const MONGODB_CONNECTION_STRING = process.env.MONGODB_CONNECTION_STRING;
-// "mongodb://127.0.0.1:27017/Kodevana"
-// process.env.MONGODB_CONNECTION_STRING
-
-const connectToDatabase = () => {
-    mongoose.connect(MONGODB_CONNECTION_STRING, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
+const dbConnect =() =>{
+    mongoose.connect(process.env.DATABASE_URL,{
+        useNewUrlParser:true,
+        useUnifiedTopology:true
     })
-        .then(() => console.log("Database conected"))
-        .catch((error) => {
-            console.log("Error connecting MongoDB!")
-            console.error(error.message)
-            process.exit(1);
-        })
+    .then(() => console.log("BD conected"))
+    .catch((error) =>{
+        console.log("Issue in DB connection")
+        console.error(error.message)
+        process.exit(1);
+    })
 }
-module.exports = connectToDatabase;
+
+module.exports = dbConnect;
