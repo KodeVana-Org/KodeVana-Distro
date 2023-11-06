@@ -24,17 +24,17 @@ const visitorRoutes = require('./router/visitor.router');
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));app.use(cors())
 
-app.use(cors({
-  origin: ['http://localhost:8000'],
-  methods: ['GET', 'POST'],
-}));
-
-app.use(cors({
-  origin: ['http://localhost:8001'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true,
-}));
+// app.use(cors({
+//   origin: ['http://localhost:8000'],
+//   methods: ['GET', 'POST'],
+// }));
+app.use(cors());
+// app.use(cors({
+//   origin: ['http://localhost:8001'],
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//   allowedHeaders: ['Content-Type', 'Authorization'],
+//   credentials: true,
+// }));
 
 app.use(cookieParser());
 app.use(express.json({ limit: '20mb' }));

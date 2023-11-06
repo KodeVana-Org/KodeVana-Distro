@@ -8,6 +8,8 @@ import {
   faInbox,
   faPaperclip,
 } from "@fortawesome/free-solid-svg-icons";
+import {baseUrl,port} from "../api"
+
 
 
 function Form() {
@@ -59,7 +61,7 @@ function Form() {
 
     try {
       const response = await axios.post(
-        "http://kodevana.com:8002/api/submit",
+        `${baseUrl}:${port}/api/submit`,
         formData
       );
 

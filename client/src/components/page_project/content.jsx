@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useInView } from "react-intersection-observer";
+import {baseUrl,port} from "../api"
 
 import '../../styles/Animate.css'
 import '../../styles/loadingAnimation.css'
@@ -17,7 +18,7 @@ function Content() {
     async function fetchData() {
       try {
         const response = await axios.get(
-          "http://kodevana.com:8002/admin/getallProjects"
+          `${baseUrl}:${port}/admin/getallProjects`
         );
         setProjects(response.data);
         setLoading(false);

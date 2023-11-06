@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import '../../styles/loadingAnimation.css'
+import {baseUrl,port} from "../api"
 
 function Founder() {
   const [developers, setDevelopers] = useState([]);
@@ -9,7 +10,7 @@ function Founder() {
     // Fetch developer data from the API
     async function fetchDevelopers() {
       try {
-        const response = await fetch("http://kodevana.com:8002/admin/get-all-dev");
+        const response = await fetch(`${baseUrl}:${port}/admin/get-all-dev`);
         if (response.ok) {
           const data = await response.json();
           setDevelopers(data);

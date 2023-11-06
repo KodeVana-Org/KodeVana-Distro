@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import '../../styles/loadingAnimation.css'
+import {baseUrl,port} from "../api"
 
 function Content() {
   const [blogPosts, setBlogPosts] = useState([]);
@@ -11,7 +12,7 @@ function Content() {
     const fetchBlogPosts = async () => {
       try {
         const response = await axios.get(
-          "http://kodevana.com:8002/admin/blog-all"
+          `${baseUrl}:${port}/admin/blog-all`
         );
         setBlogPosts(response.data);
         setLoading(false);

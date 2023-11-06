@@ -1,6 +1,7 @@
 import { useInView } from 'react-intersection-observer';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import {baseUrl,port} from "../api"
 
 import '../../styles/Animate.css';
 import '../../styles/loadingAnimation.css'
@@ -16,7 +17,7 @@ function Projects() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("http://kodevana.com:8002/admin/getallProjects");
+        const response = await axios.get(`${baseUrl}:${port}/admin/getallProjects`);
         setProjects(response.data);
         setLoading(false);
       } catch (error) {

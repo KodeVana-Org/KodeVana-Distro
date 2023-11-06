@@ -8,6 +8,7 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from 'axios';
+import {baseUrl,port} from "./api"
 
 
 function Footer() {
@@ -33,7 +34,7 @@ function Footer() {
         });
       } else {
         console.log("Email is valid.");
-        const apiUrl = 'http://kodevana.com:8002/api/send_emails';
+        const apiUrl = `${baseUrl}:${port}/api/send_emails`;
         try {
           const response = await axios.post(apiUrl, { email });
           setSent(true);
