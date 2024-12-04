@@ -1,0 +1,18 @@
+.rotate1 {
+  animation: rotate 40s linear infinite;
+}
+.rotate2 {
+  animation: rotate 45s linear infinite;
+}
+.rotate3 {
+  animation: rotate 40s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

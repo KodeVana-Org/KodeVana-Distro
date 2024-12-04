@@ -1,8 +1,0 @@
-body {
-  max-height: 100vh;
-  max-width: fit-content;
-  color: #fff;
-  background-color: #000;
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
